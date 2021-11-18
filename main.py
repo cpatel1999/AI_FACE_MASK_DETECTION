@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Nov  4 02:12:07 2021
 
-@author: brijeshlakkad
-"""
 
 import pandas as pd
 import os
@@ -24,7 +20,7 @@ root_folder = "./data"
 data_df = pd.read_csv(data_csv_file, skiprows=1, names=columns)
 
 
-def getImageData(folder, image_file, index):
+def getImageData(folder, image_file):
     return Image.open(os.path.join(folder, image_file)).convert('RGB') # Load the image
 
 
